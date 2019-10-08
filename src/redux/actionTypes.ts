@@ -1,0 +1,3 @@
+export const GET_COINS = 'GET_COINS'
+export const GET_COINS_SUCCESS = 'GET_COINS_SUCCESS'
+export const GET_COINS_FAILURE = 'GET_COINS_FAILURE'
