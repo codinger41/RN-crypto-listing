@@ -3,7 +3,7 @@ Crypto listing app with react native and react-redux hooks
 
 This project was built with react-native and coinmarketcap API
 
-**Live app is here :** https://expo.io/@leksyib/Pengscores <br/>
+**Live app is here :** https://exp.host/@leksyib/crypto_listing <br/>
 
 Design credit: Soumitro Sobuj 💯🔥. https://dribbble.com/shots/7110310-Cryptocurreny-App-Exploration/
 
