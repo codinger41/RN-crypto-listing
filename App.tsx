@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import * as Font from 'expo-font'
 import { StatusBar, View } from 'react-native'
 import { Provider } from 'react-redux'
+import FlashMessage from 'react-native-flash-message'
 import Navigation from './src'
 import store from './src/redux/store'
 
@@ -22,6 +23,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <Navigation />
+      <FlashMessage position="top" />
     </Provider>
   )
 }

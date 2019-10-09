@@ -5,5 +5,4 @@ const reducers = combineReducers({
   crypto
 })
 
-
 export default reducers

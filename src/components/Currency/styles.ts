@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { getHeight, getWidth } from  '../../theme/styles'
+import { getHeight, getWidth } from '../../theme/styles'
 import colors from '../../theme/color'
 import fonts from '../../theme/fonts'
 
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     borderRadius: getWidth(10),
     shadowOffset: {
       width: 0,
-      height: 2,
+      height: 2
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
@@ -55,6 +55,5 @@ const styles = StyleSheet.create({
     fontSize: getHeight(10)
   }
 })
-
 
 export default styles

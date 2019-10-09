@@ -1,6 +1,5 @@
 import { GET_COINS, GET_COINS_FAILURE, GET_COINS_SUCCESS } from '../actionTypes'
 
-
 const initialState = {
   coins: [],
   loading: false,
@@ -8,7 +7,6 @@ const initialState = {
 }
 
 const reducer = (state: StateT = initialState, action: ActionT) => {
-  console.log(action.type)
   switch (action.type) {
     case GET_COINS:
       return { ...state, loading: true }

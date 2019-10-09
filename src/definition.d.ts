@@ -1,4 +1,3 @@
-
 interface ScreenProp {
   navigation: {
     goBack: () => void
@@ -18,7 +17,7 @@ interface ActionT {
   payload: []
 }
 
-interface StateT  {
+interface StateT {
   coins: any
   error: any
   loading: boolean
