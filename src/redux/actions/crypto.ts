@@ -1,8 +1,20 @@
 import axios from '../../utils/axios'
-import { GET_COINS, GET_COINS_FAILURE, GET_COINS_SUCCESS } from '../actionTypes'
+import {
+  GET_COINS,
+  GET_COINS_FAILURE,
+  GET_COINS_SUCCESS,
+  REFRESH_COINS
+} from '../actionTypes'
 
-export const getCoins = async (dispatch: Function) => {
-  dispatch({ type: GET_COINS })
+type getCoinsType = 'load' | 'refresh'
+
+export const getCoins = async (
+  dispatch: Function,
+  type: getCoinsType = 'load'
+) => {
+  type === 'load'
+    ? dispatch({ type: GET_COINS })
+    : dispatch({ type: REFRESH_COINS })
   try {
     const {
       data: { data }

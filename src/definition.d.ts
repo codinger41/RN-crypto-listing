@@ -21,4 +21,5 @@ interface StateT {
   coins: any
   error: any
   loading: boolean
+  refreshing: boolean
 }

@@ -4,7 +4,8 @@ import {
   View,
   FlatList,
   ScrollView,
-  ActivityIndicator
+  ActivityIndicator,
+  RefreshControl
 } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 import { showMessage as displayMessage } from 'react-native-flash-message'
@@ -21,7 +22,7 @@ const Home = ({ navigation }: ScreenProp) => {
     getCoins(dispatch)
   }, [])
 
-  const { coins, loading, error }: any = useSelector(
+  const { coins, loading, error, refreshing }: any = useSelector(
     (state: any) => state.crypto
   )
 
@@ -35,7 +36,15 @@ const Home = ({ navigation }: ScreenProp) => {
   }
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView
+      refreshControl={
+        <RefreshControl
+          refreshing={refreshing}
+          onRefresh={() => getCoins(dispatch, 'refresh')}
+        />
+      }
+      style={styles.container}
+    >
       <Text style={styles.sectionText}>Cryptocurrencies</Text>
       {loading && <ActivityIndicator size="large" color={colors.blue} />}
       <FlatList
